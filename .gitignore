@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment
+venv/
+env/
+.env
+
+# Model checkpoints 
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Dataset besar — upload ke Kaggle/HuggingFace
+data/processed/wildjailbreak*
+data/raw/ToolSafe/
+data/raw/STAC_benchmark_data.json
+data/tcssc_dataset.csv
+
+# Output gambar dan JSON hasil training
+outputs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
