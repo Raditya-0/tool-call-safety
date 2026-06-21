@@ -12,21 +12,22 @@ build/
 venv/
 env/
 .env
+.env.*
 
 # Model checkpoints 
-checkpoints/
+/checkpoints/
 *.pt
 *.pth
 *.ckpt
+*.bin
+*.safetensors
 
-# Dataset besar — upload ke Kaggle/HuggingFace
-data/processed/wildjailbreak*
-data/raw/ToolSafe/
-data/raw/STAC_benchmark_data.json
-data/tcssc_dataset.csv
+# Dataset mentah eksternal — clone benchmark (~760MB), download ulang via skrip
+data/raw/
 
-# Output gambar dan JSON hasil training
-outputs/
+# Cache HuggingFace/Kaggle
+.cache/
+.kaggle/
 
 # Jupyter
 .ipynb_checkpoints/

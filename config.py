@@ -12,6 +12,11 @@ TOOLSAFE_SAFETYBENCH_PATH = os.path.join(TOOLSAFE_DIR, "benchmark", "agent_safet
 WILDJAILBREAK_PATH        = os.path.join(DATA_DIR, "processed", "wildjailbreak.parquet")
 SCRAPED_LABELED_PATH      = os.path.join(DATA_DIR, "processed", "scraped_labeled.csv")
 AUGMENTED_PATH            = os.path.join(DATA_DIR, "processed", "augmented.csv")
+RJUDGE_DIR                = os.path.join(RAW_DIR, "R-Judge", "data")
+INJECAGENT_DIR            = os.path.join(RAW_DIR, "InjecAgent", "data")
+AGENTDOJO_RUNS_DIR        = os.path.join(RAW_DIR, "agentdojo", "runs")
+AGENTDOJO_PIPELINE        = "gpt-4o-2024-05-13"
+REDCODE_EXEC_DIR          = os.path.join(RAW_DIR, "RedCode", "dataset", "RedCode-Exec")
 OUTPUT_DIR      = "outputs/"
 CHECKPOINT_DIR  = "checkpoints/"
 

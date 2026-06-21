@@ -1,0 +1,92 @@
+{
+  "model_name": "Model 5 Selective Semi-Frozen Fusion",
+  "training_strategy": "selective_semifrozen_whole_sequence_branch",
+  "config": {
+    "encoder_model": "bert-base-multilingual-cased",
+    "max_seq_len": 256,
+    "max_tool_calls": 20,
+    "batch_size": 16,
+    "learning_rate_bert": 2e-05,
+    "learning_rate_head": 0.0002,
+    "num_epochs": 15,
+    "weight_decay": 0.0001,
+    "early_stop": 5,
+    "unfreeze_last_n_layers": 4,
+    "lstm_hidden_size": 256,
+    "lstm_num_layers": 2,
+    "fusion_dim": 256
+  },
+  "test_metrics": {
+    "accuracy": 0.9226150767178118,
+    "macro_f1": 0.9208804369168925,
+    "weighted_f1": 0.922343501511303,
+    "asr": 4.181494661921708,
+    "benign_fpr": 12.0,
+    "test_loss": 0.3918190152179066
+  },
+  "classification_report": {
+    "benign": {
+      "precision": 0.8753315649867374,
+      "recall": 0.88,
+      "f1-score": 0.8776595744680851,
+      "support": 375.0
+    },
+    "direct_attack": {
+      "precision": 0.8948948948948949,
+      "recall": 0.863768115942029,
+      "f1-score": 0.8790560471976401,
+      "support": 345.0
+    },
+    "sequential_attack": {
+      "precision": 0.9503386004514672,
+      "recall": 0.9700460829493087,
+      "f1-score": 0.9600912200684151,
+      "support": 434.0
+    },
+    "parameter_injection": {
+      "precision": 0.9653179190751445,
+      "recall": 0.9681159420289855,
+      "f1-score": 0.9667149059334298,
+      "support": 345.0
+    },
+    "accuracy": 0.9226150767178118,
+    "macro avg": {
+      "precision": 0.921470744852061,
+      "recall": 0.9204825352300808,
+      "f1-score": 0.9208804369168925,
+      "support": 1499.0
+    },
+    "weighted avg": {
+      "precision": 0.9222613144000181,
+      "recall": 0.9226150767178118,
+      "f1-score": 0.922343501511303,
+      "support": 1499.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      330,
+      24,
+      21,
+      0
+    ],
+    [
+      34,
+      298,
+      1,
+      12
+    ],
+    [
+      13,
+      0,
+      421,
+      0
+    ],
+    [
+      0,
+      11,
+      0,
+      334
+    ]
+  ]
+}
